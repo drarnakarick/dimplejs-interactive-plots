@@ -35,10 +35,9 @@
 
 <iframe width="700px" height="700px" src="http://drarnakarick.github.io/software-carpentry-resources/public/participants.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
-
   <script type="text/javascript">
     var svg = dimple.newSvg("#chartContainer", 800, 900);
-    d3.tsv("Atlas3D_combined_kinematic_structural_data.tsv", function (data) {
+    d3.tsv("https://github.com/drarnakarick/dimplejs-interactive-plots/Atlas3D_combined_kinematic_structural_data.tsv", function (data) {
       var myChart = new dimple.chart(svg, data);
       myChart.setBounds(90,50,500, 445);
       var x = myChart.addMeasureAxis("x", "Epsilon_e");
