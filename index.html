@@ -33,6 +33,9 @@
         <h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example: Figure 4a from krajnovic et al. (2013)</h3>
 
+
+
+<script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
 <script type="text/javascript">
     var svg = dimple.newSvg("#chartContainer", 800, 900);
     d3.tsv("https://github.com/drarnakarick/dimplejs-interactive-plots/Atlas3D_combined_kinematic_structural_data.tsv", function (data) {
@@ -55,7 +58,6 @@
                     "Source data/paper: " + e.aggField[4]
                 ];
       };
-
       y.overrideMax = 0.9;
       var myLegend = myChart.addLegend(40, 60, 150, 50, "right");
       myLegend.fontSize = "12px";
@@ -66,7 +68,6 @@
       myChart.draw();
       x.titleShape.text("\u03B5_(Re)");
       y.titleShape.text("\u03BB_(Re)");
-
     });
 </script>
 
