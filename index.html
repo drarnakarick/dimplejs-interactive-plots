@@ -12,7 +12,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
   <script src="http://dimplejs.org/dist/dimple.v2.1.6.js"></script>
-
+  <script type="application/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -33,9 +33,7 @@
         <h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example: Figure 4a from krajnovic et al. (2013)</h3>
 
-<iframe width="700px" height="700px" src="http://drarnakarick.github.io/software-carpentry-resources/public/participants.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-
-  <script type="text/javascript">
+<script type="text/javascript">
     var svg = dimple.newSvg("#chartContainer", 800, 900);
     d3.tsv("https://github.com/drarnakarick/dimplejs-interactive-plots/Atlas3D_combined_kinematic_structural_data.tsv", function (data) {
       var myChart = new dimple.chart(svg, data);
@@ -70,7 +68,7 @@
       y.titleShape.text("\u03BB_(Re)");
 
     });
-  </script>
+</script>
 
 
 <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
