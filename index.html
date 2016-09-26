@@ -34,7 +34,7 @@
 <div id="chartContainer">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
   <script src="https://dimplejs.org/dist/dimple.v2.1.0.min.js"></script>
-  <script type="text/javascript" src="https://example.com/js/main.js">
+  <script type="text/javascript">
     var svg = dimple.newSvg("#chartContainer", 800, 900);
     d3.tsv("Atlas3D_combined_kinematic_structural_data.tsv", function (data) {
       var myChart = new dimple.chart(svg, data);
