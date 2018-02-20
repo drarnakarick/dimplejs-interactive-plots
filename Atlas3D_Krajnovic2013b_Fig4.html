@@ -1,8 +1,73 @@
-<div id="chartContainer">
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
-  <script src="http://dimplejs.org/dist/dimple.v2.1.0.min.js"></script>
+<html>
+<meta charset="utf-8">
+    <title>Exploring the structural parameters of Atlas3D galaxies</title>
+  </meta>
+ <head>
+   <script src="http://d3js.org/d3.v4.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.min.js"></script>
+</head>
+
+<style>
+
+  /* CSS styling */
+  #main {
+      float: center;
+      width: 1000px;
+      vertical-align: top;
+      height: 1000px;
+      margin-top: 100px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+  body {
+			  font-size: 12px;
+			/*  font-family: 'Lato', sans-serif;  */
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+			  text-align: center;
+			  fill: #2B2B2B;
+        /* fill: #FFF; */
+			  cursor: default;
+			}
+  h1 {
+			  font-size: 2.5em;
+        text-anchor: middle;
+        /*  font-family: 'Lato', sans-serif;  */
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+			  text-align: center;
+			  cursor: default;
+			}
+  h2 {
+    		font-size: 1.5em;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    		text-align: center;
+    		cursor: default;
+     }
+    @media (min-width: 500px) {
+
+				#chartContainer{
+					font-size: 16px;
+				}
+			}
+
+  </style>
+<body>
+
+
+<header>
+</header>
+
+  <div id="main">
+    <aside style="margin-top:50px;">
+      <h1>Exploring the structural parameters of Atlas3D galaxies</h1>
+      <h2>An experiment using dimple.js</h2>
+
+  <div id="chartContainer">
+
   <script type="text/javascript">
-    var svg = dimple.newSvg("#chartContainer", 800, 900);
+    var svg = dimple.newSvg("#chartContainer", 700, 700);
     d3.tsv("Atlas3D_combined_kinematic_structural_data.tsv", function (data) {
       var myChart = new dimple.chart(svg, data);
       myChart.setBounds(90,50,500, 445);
@@ -25,7 +90,8 @@
       };
 
       y.overrideMax = 0.9;
-      var myLegend = myChart.addLegend(40, 60, 150, 50, "right");
+    //  var myLegend = myChart.addLegend(40, 60, 150, 50, "right");
+      var myLegend = myChart.addLegend(550, 50, 150, 70, "right");
       myLegend.fontSize = "12px";
       myChart.assignColor("unknown", "#FFF");
       myChart.assignColor("uncertain", "000");
@@ -38,3 +104,11 @@
     });
   </script>
 </div>
+
+
+
+
+
+</div>
+</body>
+</html>
